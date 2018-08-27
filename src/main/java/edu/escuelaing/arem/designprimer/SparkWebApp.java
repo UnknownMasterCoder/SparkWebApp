@@ -16,6 +16,7 @@ public class SparkWebApp {
     public static Double set_2_StdDev;
 	
     public static void main(String[] args) { 
+        setPort(4567);
         port(getPort());
 	get("/index", (req, res) -> indexPage(req, res));
         get("/calcdata", (req, res) -> calcdataPage(req, res));
@@ -38,7 +39,7 @@ public class SparkWebApp {
 "      <h2>Mean and Standar Deviation Web App!</h2>\n" +
 "      <p>Aplicación Web para calcular la media y la desviacion estandar de un conjunto de datos dados por el usuario.\n\n</p>\n" +
 "      <p>\n\nClick the next link to start entering your data:</p>\n" +             
-"      <a href = \"http://localhost:9999/calcdata\" target = \"_self\">Enter Your Data</a>\n" +                
+"      <a href = \"/calcdata\" target = \"_self\">Enter Your Data</a>\n" +                
 "   </body>\n" +
 "	\n" +
 "</html>";
